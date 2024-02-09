@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-chat-deployment
+spec:
+  selector:
+    matchLabels:
+      app: chat-deployment 
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: chat-deployment 
+    spec:
+      containers:
+      - name: chat-deployment
+        image: gcr.io/gcp-docker-kubernetes-413600/chat-service:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: spring-chat-config

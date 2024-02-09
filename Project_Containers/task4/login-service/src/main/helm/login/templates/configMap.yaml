@@ -1,11 +1,8 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: spring-chat-config
+  name: spring-login-config
 data:
-  SPRING_REDIS_HOST: 'redis-service'
-  SPRING_REDIS_PASSWORD: 'SuperSecretRedisPassword'
-  SPRING_REDIS_PORT: '6379'
   RAW_TOPIC_MESSAGE: '/topic/messages'
   # TODO: update endpoints for multi-cloud in task5
   # You can list multiple endpoints by connecting them with a comma
@@ -17,3 +14,4 @@ data:
   MYSQL_DB_USER: 'okemawo'
   MYSQL_DB_PASSWORD: 'okemawo123'
   MYSQL_DB_PORT: '3306'
+  CHAT_ENDPOINT: '35.229.54.218'
