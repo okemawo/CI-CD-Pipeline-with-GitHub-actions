@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: login-deployment
-          image: gcr.io/gcp-docker-kubernetes-413600/login-service:1.0
+          image: wechatcontainerregistry.azurecr.io/login-image:1.0
           ports:
             - containerPort: 8080
           envFrom:
