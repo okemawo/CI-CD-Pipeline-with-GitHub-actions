@@ -10,7 +10,7 @@ data:
   # TODO: update endpoints for multi-cloud in task5
   # You can list multiple endpoints by connecting them with a comma
   # e.g. 'endpoint1,endpoint2'
-  LIST_OF_PROFILE_ENDPOINTS: 'spring-profile-service.default.svc.cluster.local,20.242.144.162'
+  LIST_OF_PROFILE_ENDPOINTS: 'spring-profile-service.default.svc.cluster.local,172.212.33.127'
   MYSQL_DB_HOST: 'mysql-chat.default.svc.cluster.local'
   # TODO: update MYSQL_DB_USER and MYSQL_DB_PASSWORD to match the variables that you used 
   #       to install the MySQL service
