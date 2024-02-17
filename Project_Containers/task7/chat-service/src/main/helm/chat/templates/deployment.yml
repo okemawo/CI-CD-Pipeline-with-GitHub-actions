@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-login-deployment
+  name: spring-chat-deployment
 spec:
   selector:
     matchLabels:
-      app: login-deployment
-  replicas: 2
+      app: chat-deployment
+  replicas: 3
   template:
     metadata:
       labels:
-        app: login-deployment
+        app: chat-deployment
     spec:
       containers:
-        - name: login-deployment
-          image: wechatcontainerregistry.azurecr.io/login-image:1.0
+        - name: chat-deployment
+          image: gcr.io/gcp-docker-kubernetes-413600/chat-service:1.0
           ports:
             - containerPort: 8080
           envFrom:
             - configMapRef:
-                name: spring-login-config
+                name: spring-chat-config
           resources:
             requests:
               cpu: 200m
@@ -28,13 +28,13 @@ spec:
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: spring-login-autoscaling
+  name: spring-chat-autoscaling
   namespace: default
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: spring-login-deployment
+    name: spring-chat-deployment
   minReplicas: 1
   maxReplicas: 10
   targetCPUUtilizationPercentage: 50

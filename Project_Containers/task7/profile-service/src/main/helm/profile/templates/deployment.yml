@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-login-deployment
+  name: spring-profile-deployment
 spec:
   selector:
     matchLabels:
-      app: login-deployment
-  replicas: 2
+      app: profile-deployment
+  replicas: 3
   template:
     metadata:
       labels:
-        app: login-deployment
+        app: profile-deployment
     spec:
       containers:
-        - name: login-deployment
-          image: wechatcontainerregistry.azurecr.io/login-image:1.0
+        - name: profile-deployment
+          image: gcr.io/gcp-docker-kubernetes-413600/profile-service:3.2
           ports:
             - containerPort: 8080
           envFrom:
             - configMapRef:
-                name: spring-login-config
+                name: spring-profile-config
           resources:
             requests:
               cpu: 200m
@@ -28,13 +28,13 @@ spec:
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: spring-login-autoscaling
+  name: spring-profile-autoscaling
   namespace: default
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: spring-login-deployment
+    name: spring-profile-deployment
   minReplicas: 1
   maxReplicas: 10
   targetCPUUtilizationPercentage: 50
