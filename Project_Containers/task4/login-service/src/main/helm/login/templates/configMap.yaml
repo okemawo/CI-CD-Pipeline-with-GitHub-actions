@@ -8,10 +8,10 @@ data:
   # You can list multiple endpoints by connecting them with a comma
   # e.g. 'endpoint1,endpoint2'
   LIST_OF_PROFILE_ENDPOINTS: 'spring-profile-service.default.svc.cluster.local'
-  MYSQL_DB_HOST: 'mysql-login.default.svc.cluster.local'
+  MYSQL_DB_HOST: 'mysql-profile.default.svc.cluster.local'
   # TODO: update MYSQL_DB_USER and MYSQL_DB_PASSWORD to match the variables that you used 
   #       to install the MySQL service
   MYSQL_DB_USER: 'okemawo'
   MYSQL_DB_PASSWORD: 'okemawo123'
   MYSQL_DB_PORT: '3306'
-  CHAT_ENDPOINT: '35.229.54.218'
+  CHAT_ENDPOINT: '34.148.104.5'
