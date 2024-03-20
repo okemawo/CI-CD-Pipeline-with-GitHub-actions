@@ -1,4 +1,4 @@
-# A multicloud CI Pipeline with Github actions
+# A Multicloud CI/CD Pipeline with Github actions
 
 This project employs a Continuous Integration/Continuous Deployment (CI/CD) pipeline using GitHub Actions. The pipeline is defined in the `.github/workflows/cicd.yml` file.
 
