@@ -8,7 +8,6 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
  * Spring boot main class to start the application.
- *
  * @author lucas
  */
 @SpringBootApplication
