@@ -2,6 +2,8 @@
 
 This project employs a Continuous Integration/Continuous Deployment (CI/CD) pipeline using GitHub Actions. The pipeline is defined in the `.github/workflows/cicd.yml` file.
 
+![image](https://github.com/okemawo/CI-CD-Pipeline-with-GitHub-actions/assets/65502643/f31a5cfc-ef3f-4b7a-bbc0-41bbd54addcd)
+
 ## Workflow Overview
 
 The workflow is activated on push events to the `main` branch and can also be manually triggered from the Actions tab.
